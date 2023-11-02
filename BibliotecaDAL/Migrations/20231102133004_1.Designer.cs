@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BibliotecaDAL.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20231102123801_primeraMigracion")]
-    partial class primeraMigracion
+    [Migration("20231102133004_1")]
+    partial class _1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,11 +25,34 @@ namespace BibliotecaDAL.Migrations
 
             NpgsqlModelBuilderExtensions.UseSerialColumns(modelBuilder);
 
-            modelBuilder.Entity("BibiliotecaDAL.Usuario", b =>
+            modelBuilder.Entity("BibliotecaDAL.Entidades.Acceso", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("bigint")
+                        .HasColumnName("id_acceso");
+
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("codigo_acceso")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("descripcion_acceso")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("accesos");
+                });
+
+            modelBuilder.Entity("BibliotecaDAL.Usuario", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasColumnName("id_usuario");
 
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("Id"));
 
@@ -66,7 +89,7 @@ namespace BibliotecaDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Usuarios");
+                    b.ToTable("usuarios");
                 });
 #pragma warning restore 612, 618
         }

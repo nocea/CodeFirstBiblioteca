@@ -1,4 +1,5 @@
-﻿using BibiliotecaDAL;
+﻿
+using BibliotecaDAL.Entidades;
 using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
 using System.Collections.Generic;
@@ -14,7 +15,8 @@ namespace BibliotecaDAL
         {
             modelBuilder.UseSerialColumns();
         }
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Usuario> usuarios { get; set; }
+        public DbSet<Acceso> accesos { get; set; }
     }
 }
 

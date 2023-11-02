@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-namespace BibiliotecaDAL
+namespace BibliotecaDAL
 {
     public class Usuario
-    { 
+    {
+        [Column("id_usuario")]
         public long Id { get; set; }
         public int dni_usuario { get; set; }
         public string nombre_usuario { get; set; } = null!;

@@ -7,16 +7,30 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BibliotecaDAL.Migrations
 {
     /// <inheritdoc />
-    public partial class primeraMigracion : Migration
+    public partial class _1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Usuarios",
+                name: "accesos",
                 columns: table => new
                 {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
+                    id_acceso = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    codigo_acceso = table.Column<string>(type: "text", nullable: false),
+                    descripcion_acceso = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_accesos", x => x.id_acceso);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "usuarios",
+                columns: table => new
+                {
+                    id_usuario = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     dni_usuario = table.Column<int>(type: "integer", nullable: false),
                     nombre_usuario = table.Column<string>(type: "text", nullable: false),
@@ -30,7 +44,7 @@ namespace BibliotecaDAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuarios", x => x.Id);
+                    table.PrimaryKey("PK_usuarios", x => x.id_usuario);
                 });
         }
 
@@ -38,7 +52,10 @@ namespace BibliotecaDAL.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Usuarios");
+                name: "accesos");
+
+            migrationBuilder.DropTable(
+                name: "usuarios");
         }
     }
 }
