@@ -1,0 +1,14 @@
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\obj\Debug\net6.0\BibliotecaDAL.csproj.AssemblyReference.cache
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\obj\Debug\net6.0\BibliotecaDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\obj\Debug\net6.0\BibliotecaDAL.AssemblyInfoInputs.cache
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\obj\Debug\net6.0\BibliotecaDAL.AssemblyInfo.cs
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\obj\Debug\net6.0\BibliotecaDAL.csproj.CoreCompileInputs.cache
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\bin\Debug\net6.0\BibliotecaDAL.deps.json
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\bin\Debug\net6.0\BibliotecaDAL.runtimeconfig.json
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\bin\Debug\net6.0\BibliotecaDAL.dll
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\bin\Debug\net6.0\BibliotecaDAL.pdb
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\obj\Debug\net6.0\BibliotecaDAL.dll
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\obj\Debug\net6.0\refint\BibliotecaDAL.dll
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\obj\Debug\net6.0\BibliotecaDAL.pdb
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\obj\Debug\net6.0\BibliotecaDAL.genruntimeconfig.cache
+C:\Users\Puesto10\source\repos\CodeFirstBiblioteca\BibliotecaDAL\obj\Debug\net6.0\ref\BibliotecaDAL.dll
