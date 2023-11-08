@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace BibliotecaDAL.Entidades
 {
-    public class Acceso
+    public class Coleccion
     {
-        [Column("id_acceso")]
+        [Column("id_coleccion")]
         public long Id { get; set; }
-        public string codigo_acceso { get; set; }
-        public string descripcion_acceso { get; set; }
-        public List<Usuario> listaUsuarios { get; set; }
+        public string nombre_coleccion {  get; set; }
     }
 }

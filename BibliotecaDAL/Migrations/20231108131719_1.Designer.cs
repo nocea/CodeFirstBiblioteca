@@ -3,6 +3,7 @@ using System;
 using BibliotecaDAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BibliotecaDAL.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20231108131719_1")]
+    partial class _1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +44,7 @@ namespace BibliotecaDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("accesos", (string)null);
+                    b.ToTable("accesos");
                 });
 
             modelBuilder.Entity("BibliotecaDAL.Entidades.Autor", b =>
@@ -63,7 +66,7 @@ namespace BibliotecaDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Autor", (string)null);
+                    b.ToTable("Autor");
                 });
 
             modelBuilder.Entity("BibliotecaDAL.Entidades.Estados_Prestamos", b =>
@@ -85,7 +88,7 @@ namespace BibliotecaDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("estados_prestamos", (string)null);
+                    b.ToTable("estados_prestamos");
                 });
 
             modelBuilder.Entity("BibliotecaDAL.Entidades.Libro", b =>
@@ -114,7 +117,7 @@ namespace BibliotecaDAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("libros", (string)null);
+                    b.ToTable("libros");
                 });
 
             modelBuilder.Entity("BibliotecaDAL.Entidades.Prestamo", b =>
@@ -147,7 +150,7 @@ namespace BibliotecaDAL.Migrations
 
                     b.HasIndex("id_usuario");
 
-                    b.ToTable("prestamos", (string)null);
+                    b.ToTable("prestamos");
                 });
 
             modelBuilder.Entity("BibliotecaDAL.Usuario", b =>
@@ -197,7 +200,7 @@ namespace BibliotecaDAL.Migrations
 
                     b.HasIndex("id_acceso");
 
-                    b.ToTable("usuarios", (string)null);
+                    b.ToTable("usuarios");
                 });
 
             modelBuilder.Entity("Rel_Autores_Libros", b =>
@@ -212,7 +215,7 @@ namespace BibliotecaDAL.Migrations
 
                     b.HasIndex("listaLibrosId");
 
-                    b.ToTable("Rel_Autores_Libros", (string)null);
+                    b.ToTable("Rel_Autores_Libros");
                 });
 
             modelBuilder.Entity("Rel_Prestamos_Libros", b =>
@@ -227,7 +230,7 @@ namespace BibliotecaDAL.Migrations
 
                     b.HasIndex("listaPrestamosId");
 
-                    b.ToTable("Rel_Prestamos_Libros", (string)null);
+                    b.ToTable("Rel_Prestamos_Libros");
                 });
 
             modelBuilder.Entity("BibliotecaDAL.Entidades.Prestamo", b =>
